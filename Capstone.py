@@ -69,10 +69,10 @@ with col5:
 with col6:
     corr,pvalue = spearmanr(data_r['Norways pm10 Pollution Index (pm10)'], data_r['Norways EV Vehicle Market Share (%)'])
     st.metric("Korelasi Spearmann", round(corr,3),)
-    st.write("""Polusi dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
-                Hubungan negatif tersebut menandakan semakin tinggi proporsi kendaraan listrik, maka populasi akan cenderung semakin rendah.""")
+    st.write("""Polusi udara dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
+                Hubungan negatif tersebut menandakan semakin tinggi proporsi kendaraan listrik, maka polusi udara akan cenderung semakin rendah.""")
     st.write("""Dari pemeriksaan hubungan tersebut, tentunya sudah terjawab bahwa peralihan pemakaian mobil bbm ke mobil listrik akan menyebabkan 
-                pengaruh yang baik pada berkurangnya polusi di negara kita. Polusi yang berkurang akan bermanfaat juga bagi kesehatan, kinerja, dan kemajuan 
+                pengaruh yang baik pada berkurangnya polusi udara di negara kita. Polusi udara yang berkurang akan bermanfaat juga bagi kesehatan, kinerja, dan kemajuan 
                 Bangsa Indonesia.""")
 
 st.write("---")
