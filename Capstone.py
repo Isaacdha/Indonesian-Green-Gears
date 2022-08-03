@@ -2,6 +2,7 @@ import streamlit as st
 import time
 import pandas as pd
 import numpy as np
+import plotly.express as px
 from scipy.stats import spearmanr
 
 #Import Data
@@ -47,8 +48,9 @@ with col12:
     st.markdown("***Proporsi Penyebab Pencemaran Udara (sumber: kompas)***")
     data_barchart = data_presentase.copy()
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
-    data_barchart.set_index('Alias', inplace=True)
-    st.bar_chart(data_barchart)
+    #data_barchart.set_index('Alias', inplace=True)
+    fig = px.pie(data_barchart, values='Presentase', names='Alias')
+    st.plotly_chart(fig)
 
 with st.expander("Data Polusi (pm10) dan Presentase kendaraan listrik"):
     st.write('Berikut adalah data Polusi (pm10) dan Presentase kendaraan listrik (dilihat dari market share %) di Norwegia tahun 2010-2020 (sumber: statista.com & aqicn.org)')
