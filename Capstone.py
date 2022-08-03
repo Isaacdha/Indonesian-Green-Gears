@@ -30,7 +30,7 @@ st.write("""Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
-col11, col12 = st.columns([6,3], gap = "large")
+col11, col12 = st.columns([5,4], gap = "large")
 with col11:
     st.write("""Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
                 sehingga dalam pengoperasiannya minim polusi. Disisi lain, Mobil bbm masih bergantung pada pembakaran minyak yang tentunya melepaskan banyak gas rumah kaca 
