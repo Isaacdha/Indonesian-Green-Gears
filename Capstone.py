@@ -50,7 +50,7 @@ with col12:
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
     #data_barchart.set_index('Alias', inplace=True)
     fig = px.pie(data_barchart, values='Presentase', names='Alias')
-    fig.layout.update(showlegend=False)
+    #fig.layout.update(showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
 
 with st.expander("Data Polusi (pm10) dan Presentase kendaraan listrik"):
