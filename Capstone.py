@@ -208,4 +208,4 @@ st.write("")
 with st.expander("Footnote"):
     st.write('Sumber berita & data : kompas.co.id; gaikindo.or.id; autofun.co.id; oto.com; statista.com; aqicn.org; kompasiana.com')
     st.markdown('***Isaac Dwadattusyah Haikal Azziz @2022 - Capstone Project for TETRIS II By DQLab***')
-    st.markdown("Penulis sadar bahwa masih banyak kekurangan dalam pembuatan artikel dashboard ini, untuk saran dan masukan dapat dikirimkan ke email Isaacazziz@gmail.com")
+    st.markdown("Penulis sadar bahwa masih banyak kekurangan dalam pembuatan artikel dashboard ini, untuk saran dan masukan dapat dikirimkan ke email Isaacazziz@gmail.com atau linkedin.com/in/isaacdha/")
