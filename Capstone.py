@@ -37,7 +37,7 @@ with col11:
                 yang merupakan penyebab polusi udara.""")
     st.write("""
                 Dikutip dari Kompas.com, 75% dari polusi udara di Indonesia disebabkan oleh transportasi, diikuti oleh pembangkit listrik dan pemanas pada 9%, Industri 8%, 
-                dan Domestik 8%. Data-data tersebut tersaji pada diagram garis di samping ini. Fakta ini tentunya merupakan salah satu motivasi pemerintah dalam mendukung 
+                dan Domestik 8%. Data-data tersebut tersaji pada diagram lingkaran di samping ini. Fakta ini tentunya merupakan salah satu motivasi pemerintah dalam mendukung 
                 peralihan jenis mobil baik dari regulasi maupun investasi.""")
     st.write("""
                 Dari argumen diatas pastinya terdapat pertanyaan. Apakah terdapat hubungan dari peralihan tenaga mobil dari BBM ke listrik pada polusi udara?. Untuk menjawab hal
@@ -45,7 +45,7 @@ with col11:
                 pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini. """)
 
 with col12:
-    st.markdown("***Proporsi Penyebab Pencemaran Udara (sumber: kompas)***")
+    st.markdown("***Pie Chart Proporsi Penyebab Pencemaran Udara (sumber data: kompas)***")
     data_barchart = data_presentase.copy()
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
     #data_barchart.set_index('Alias', inplace=True)
@@ -107,7 +107,7 @@ with col1:
     st.dataframe(data_mobil_harga[['Alias', 'Jenis', 'Harga', 'Kode']])
 
 with col2:
-    st.markdown('***Grafik Batang Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
+    st.markdown('***Bar Chart Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
     data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
     for i in range(0,len(data_mobil_harga)):
         if data_mobil_harga['Jenis'][i] == 'Bensin':
@@ -183,7 +183,7 @@ st.write("""Perbandingan lainnya yang tidak kalah penting adalah stasiun pengisi
 
 col9, col10 = st.columns([3, 1], gap="large")
 with col9:
-    st.markdown("***Persebaran Stasiun Bahan Bakar di Indonesia (sumber: kompasiana)***")
+    st.markdown("***Peta Persebaran Stasiun Bahan Bakar di Indonesia (sumber data: kompasiana)***")
     st.image('SPKLU-Transparent.png')
 with col10:
     st.write("""Dari grafik penyebaran SPKLU disamping, dapat dilihat bahwa SPKLU di Indonesia masih berpusat di Pulau Jawa saja, sementara itu daerah Kalimantan dan Papua masih belum
