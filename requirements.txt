@@ -3,3 +3,4 @@ numpy==1.22.0
 pandas==1.4.3
 scipy==1.7.3
 openpyxl==3.0.10
+plotly==5.9.0
