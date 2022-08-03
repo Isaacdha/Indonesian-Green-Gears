@@ -134,7 +134,7 @@ car_choice = st.multiselect('Pilih Mobil Untuk Dibandingkan', data_mobil['Alias'
 
 col3, col4 = st.columns([3, 1], gap="large")
 with col3:
-    number_of_sim = st.slider('Jarak Perjalanan (KM)', min_value=500000, max_value=10000000, step=500000)
+    number_of_sim = st.slider('Jarak Perjalanan (KM)', min_value=500000, max_value=10000000, value=2000000, step=500000)
     n = range(0, int(number_of_sim), int((number_of_sim/30)))
     sim_dataframe = pd.DataFrame()
     sim_dataframe['Index'] = list(n)
