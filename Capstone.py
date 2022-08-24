@@ -101,6 +101,8 @@ col1, col2 = st.columns([4,6], gap = 'large')
 data_mobil_harga = data_mobil.copy()
 data_mobil_harga.drop([9,10], inplace=True)
 data_mobil_harga['Kode'] = ['Rush MT', 'T Avanza', 'Xpander', 'Rush AT', 'Veloz', 'Ioniq5Ex', 'Leaf', 'Ioniq', 'Kona']
+data_mobil_show = data_mobil_harga.copy()
+data_mobil_show['Harga'] = data_mobil_show['Harga'].apply(lambda x: str(round(x/1000000)) + 'jt')
 
 with col1:
     st.markdown('***Tabel Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
