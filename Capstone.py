@@ -18,7 +18,7 @@ st.set_page_config(
 
 with st.spinner(text = 'Loading Resources...'):
     time.sleep(5)
-
+    
 #Introduction
 st.image('Header.png')
 st.write("---")
