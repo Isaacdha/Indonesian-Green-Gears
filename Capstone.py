@@ -106,7 +106,7 @@ data_mobil_show['Harga'] = data_mobil_show['Harga'].apply(lambda x: str(round(x/
 
 with col1:
     st.markdown('***Tabel Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
-    st.dataframe(data_mobil_harga[['Alias', 'Jenis', 'Harga', 'Kode']])
+    st.dataframe(data_mobil_show[['Alias', 'Jenis', 'Harga', 'Kode']])
 
 with col2:
     st.markdown('***Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
