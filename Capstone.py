@@ -45,7 +45,7 @@ with col11:
                 pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini. """)
 
 with col12:
-    st.markdown("***Pie Chart Proporsi Penyebab Pencemaran Udara (sumber data: kompas)***")
+    st.markdown("***Proporsi Penyebab Pencemaran Udara (sumber data: kompas)***")
     data_barchart = data_presentase.copy()
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
     #data_barchart.set_index('Alias', inplace=True)
@@ -64,9 +64,9 @@ data_r.set_index('Year', inplace=True)
 col5, col6 = st.columns([8,4], gap = "large")
 
 with col5:
-    st.markdown('***Line Chart Polusi Udara di Norwegia 2009-2020 (Trend Turun)***')
+    st.markdown('***Trend Polusi Udara di Norwegia 2009-2020***')
     st.line_chart(data_r['Norways pm10 Pollution Index (pm10)'], height = 200)
-    st.markdown('***Line Chart Market Share Kendaraan Listrik di Norwegia 2009-2020 (Trend Naik)***')
+    st.markdown('***Trend Market Share Kendaraan Listrik di Norwegia 2009-2020***')
     st.line_chart(data_r['Norways EV Vehicle Market Share (%)'], height = 200)
 
 with col6:
@@ -107,7 +107,7 @@ with col1:
     st.dataframe(data_mobil_harga[['Alias', 'Jenis', 'Harga', 'Kode']])
 
 with col2:
-    st.markdown('***Bar Chart Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
+    st.markdown('***Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
     data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
     for i in range(0,len(data_mobil_harga)):
         if data_mobil_harga['Jenis'][i] == 'Bensin':
@@ -183,7 +183,7 @@ st.write("""Perbandingan lainnya yang tidak kalah penting adalah stasiun pengisi
 
 col9, col10 = st.columns([3, 1], gap="large")
 with col9:
-    st.markdown("***Peta Persebaran Stasiun Bahan Bakar di Indonesia (sumber data: kompasiana)***")
+    st.markdown("***Peta Persebaran Stasiun Elektrik di Indonesia (sumber data: kompasiana)***")
     st.image('SPKLU-Transparent.png')
 with col10:
     st.write("""Dari grafik penyebaran SPKLU disamping, dapat dilihat bahwa SPKLU di Indonesia masih berpusat di Pulau Jawa saja, sementara itu daerah Kalimantan dan Papua masih belum
