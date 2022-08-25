@@ -145,7 +145,7 @@ with col2:
                 data_bar['BBM'][i] = 0
                 data_bar['Index'] = data_mobil_harga['Kode']
         data_bar.set_index('Index', inplace=True)
-        data_bar_agg = pd.DataFrame(np.zeros(2, 2), columns=['BBM', 'Elektrik'])
+        data_bar_agg = pd.DataFrame(np.zeros((2,2)), columns=['BBM', 'Elektrik'])
         data_bar_agg.iloc[0,0] = data_bar[data_bar["BBM"] != 0]["BBM"].mean()
         data_bar_agg.iloc[1,1] = data_bar[data_bar["Elektrik"] != 0]["Elektrik"].mean()
         data_bar_agg.set_index('Index', inplace=True)
