@@ -23,7 +23,7 @@ with st.spinner(text = 'Loading Resources...'):
 st.image('Header.png')
 st.write("---")
 st.markdown('''<div style="text-align: justify;">
-                  Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi presiden (inpres) terkait penggunaan kendaraan listrik di lingkungan pemerintahan. 
+              Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi presiden (inpres) terkait penggunaan kendaraan listrik di lingkungan pemerintahan. 
             Selain itu, Rencana investasi dan pembangunan pabrik baterai dan mobil listrik baru saja diluncurkan oleh beberapa perusahaan mobil listrik, sebut saja 
             Hyundai (Juni) dan Wuling (Juli). Dibalik rencana dan berita tersebut, tentunya banyak pro dan kontra mengenai mobil listrik yang akan menggantikan mobil
             berbahan bakar minyak. Apa saja perbedaan dari kedua jenis mobil tersebut? Berikut pembahasannya.</div>''', unsafe_allow_html=True)
@@ -34,15 +34,15 @@ st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
 col11, col12 = st.columns([5,4], gap = "medium")
 with col11:
     st.markdown('''<div style="text-align: justify;">
-                      Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
+                  Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
                 sehingga dalam pengoperasiannya minim polusi. Disisi lain, Mobil bbm masih bergantung pada pembakaran minyak yang tentunya melepaskan banyak gas rumah kaca 
                 yang merupakan penyebab polusi udara.</div>''', unsafe_allow_html=True)
     st.markdown('''<div style="text-align: justify;">
-                      Dikutip dari Kompas.com, 75% dari polusi udara di Indonesia disebabkan oleh transportasi, diikuti oleh pembangkit listrik dan pemanas pada 9%, Industri 8%, 
+                  Dikutip dari Kompas.com, 75% dari polusi udara di Indonesia disebabkan oleh transportasi, diikuti oleh pembangkit listrik dan pemanas pada 9%, Industri 8%, 
                 dan Domestik 8%. Data-data tersebut tersaji pada diagram lingkaran di samping ini. Fakta ini tentunya merupakan salah satu motivasi pemerintah dalam mendukung 
                 peralihan jenis mobil baik dari regulasi maupun investasi.</div>''', unsafe_allow_html=True)
     st.markdown('''<div style="text-align: justify;">
-                      Dari argumen diatas pastinya terdapat pertanyaan. Apakah terdapat hubungan dari peralihan tenaga mobil dari BBM ke listrik pada polusi udara?. Untuk menjawab hal
+                  Dari argumen diatas pastinya terdapat pertanyaan. Apakah terdapat hubungan dari peralihan tenaga mobil dari BBM ke listrik pada polusi udara?. Untuk menjawab hal
                 tersebut, kita meminjam data dari Norwegia, yang merupakan salah satu negara yang berhasil melakukan peralihan energi mobil 10 tahun terakhir ini. Data dan
                 pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini.</div>''', unsafe_allow_html=True)
 
@@ -75,11 +75,11 @@ with col6:
     corr,pvalue = spearmanr(data_r['Norways pm10 Pollution Index (pm10)'], data_r['Norways EV Vehicle Market Share (%)'])
     st.metric("Korelasi Spearmann", round(corr,3),)
     st.markdown('''<div style="text-align: justify;">
-                Polusi udara dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
+                  Polusi udara dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
                 Hubungan negatif tersebut menandakan semakin tinggi proporsi kendaraan listrik, maka polusi udara akan cenderung semakin rendah.
                 </div>''', unsafe_allow_html=True)
     st.markdown('''<div style="text-align: justify;">
-                Dari pemeriksaan hubungan tersebut, tentunya sudah terjawab bahwa peralihan pemakaian mobil bbm ke mobil listrik akan menyebabkan 
+                  Dari pemeriksaan hubungan tersebut, tentunya sudah terjawab bahwa peralihan pemakaian mobil bbm ke mobil listrik akan menyebabkan 
                 pengaruh yang baik pada berkurangnya polusi udara di negara kita. Polusi udara yang berkurang akan bermanfaat juga bagi kesehatan, kinerja, dan kemajuan 
                 Bangsa Indonesia.
                 </div>''', unsafe_allow_html=True)
@@ -89,15 +89,19 @@ st.write("---")
 
 #Bagian 2 : COST MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 2 : Cost Mobil Listrik VS Bensin")
-st.write("""Perbedaan selanjutnya sekaligus tantangan bagi peralihan energi adalah biaya (cost) dari mobil listrik itu sendiri. Biaya adalah uang yang 
+st.markdown('''<div style="text-align: justify;">
+              Perbedaan selanjutnya sekaligus tantangan bagi peralihan energi adalah biaya (cost) dari mobil listrik itu sendiri. Biaya adalah uang yang 
             dikeluarkan untuk mengadakan/melakukan sesuatu (KBBI), sehingga harga dan biaya jalan masuk dalam komponen biaya itu sendiri. perbedaan biaya 
-            kedua tipe model ini akan kita kulik satu-persatu.""")
+            kedua tipe model ini akan kita kulik satu-persatu.
+            </div>''', unsafe_allow_html=True)
 
 #Harga
 st.subheader("Harga")
-st.write("""Harga dari suatu produk sangat dipengaruhi oleh ketersediaan pabrik dan sumber daya suatu negara. 
+st.write('''<div style="text-align: justify;">
+              Harga dari suatu produk sangat dipengaruhi oleh ketersediaan pabrik dan sumber daya suatu negara. 
             Mayoritas dari mobil listrik di Indonesia yang merupakan barang import pabrik luar negeri tentunya menyebabkan harganya melambung naik.
-            Sebagai contoh, berikut adalah data harga dari 5 mobil bbm dan 4 mobil listrik terlaris di Indonesia selama 2022.""")
+            Sebagai contoh, berikut adalah data harga dari 5 mobil bbm dan 4 mobil listrik terlaris di Indonesia selama 2022.
+            </div>''', unsafe_allow_html=True)
 with st.expander('Sumber'):
     st.markdown('***Sumber Data : Data Bulanan Penjualan Kendaraan Januari 2022 - Juni 2022 Gabungan Industri Kendaraan Bermotor Indonesia (GAIKINDO)***')
     st.markdown('***Website : gaikindo.or.id***')
@@ -128,15 +132,18 @@ with col2:
     data_bar.set_index('Index', inplace=True)
     st.bar_chart(data_bar, width=500, height=375)
 
-st.write("""Dari data dan grafik diatas, tentunya terlihat bahwa mobil listrik sangat mahal dibandingkan dengan mobil bbm yang tentunya merupakan halangan bagi
-            masyarakat untuk beralih ke mobil listrik. perbedaan harga yang signifikan tersebut membuat masyarakat juga masih setia dalam menggunakan mobil bbm.""")  
+st.markdown('''<div style="text-align: justify;">
+              Dari data dan grafik diatas, tentunya terlihat bahwa mobil listrik sangat mahal dibandingkan dengan mobil bbm yang tentunya merupakan halangan bagi
+            masyarakat untuk beralih ke mobil listrik. perbedaan harga yang signifikan tersebut membuat masyarakat juga masih setia dalam menggunakan mobil bbm.
+            </div>''', unsafe_allow_html=True) 
 
 ##Grafik Simulasi
 st.subheader('Simulasi Cost')
-st.write("""Klaim dari beberapa media mengatakan bahwa memilih untuk menggunakan mobil listrik lebih hemat biaya dibandingkan memilih untuk menggunakan mobil bbm karena harga listrik yang 
+st.markdown('''<div style="text-align: justify;">
+              Klaim dari beberapa media mengatakan bahwa memilih untuk menggunakan mobil listrik lebih hemat biaya dibandingkan memilih untuk menggunakan mobil bbm karena harga listrik yang 
             lebih murah dibandingkan bbm. Apakah klaim tersebut benar?. Untuk menjawab klaim tersebut, kita dapat melakukan simulasi sederhana menggunakan komponen dari biaya
             itu sendiri, yaitu harga dan biaya per KM dengan acuan harga bensin Rp.7650/liter (Pertalite) dan harga listrik Rp.2466/kwh (SPKLU) yang dapat dilihat pada grafik dibawah.
-        """)
+            </div>''', unsafe_allow_html=True)
 st.markdown("***Simulasi Perbandingan Total Cost***")
 car_choice = st.multiselect('Pilih Mobil Untuk Dibandingkan', data_mobil['Alias'], ['EV-Based Vehicle', 'Gas-Based Vehicle'])
 
@@ -184,29 +191,34 @@ st.write("---")
 
 #Bagian 3 : STASIUN PENGISIAN MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 3 : STASIUN PENGISIAN MOBIL LISTRIK VS BENSIN")
-st.write("""Perbandingan lainnya yang tidak kalah penting adalah stasiun pengisian mobil listrik, Kesulitan menemukan SPKLU dan ketimpangan antara jumlah SPBU dan 
+st.markdown('''<div style="text-align: justify;">
+              Perbandingan lainnya yang tidak kalah penting adalah stasiun pengisian mobil listrik, Kesulitan menemukan SPKLU dan ketimpangan antara jumlah SPBU dan 
             jumlah SPKLU merupakan halangan utama masyarakat dari memilih mobil listrik sebagai kendaraan sehari-harinya. Sebagai perbandingan, SPBU di Indonesia 
             tercatat berjumlah sebanyak 5518 buah, jauh mengalahkan jumlah SPKLU dengan jumlah sebanyak 184 yang tersebar di pulau-pulau tertentu. Penyebaran SPKLU 
-            di Indonesia dapat dilihat pada grafik dibawah.""")
+            di Indonesia dapat dilihat pada grafik dibawah.
+            </div>''', unsafe_allow_html=True)
 
 col9, col10 = st.columns([3, 1], gap="large")
 with col9:
     st.markdown("***Peta Persebaran Stasiun Elektrik di Indonesia (sumber data: kompasiana)***")
     st.image('SPKLU-Transparent.png')
 with col10:
-    st.write("""Dari grafik penyebaran SPKLU disamping, dapat dilihat bahwa SPKLU di Indonesia masih berpusat di Pulau Jawa saja, sementara itu daerah Kalimantan dan Papua masih belum
+    st.markdown('''<div style="text-align: justify;">
+                  Dari grafik penyebaran SPKLU disamping, dapat dilihat bahwa SPKLU di Indonesia masih berpusat di Pulau Jawa saja, sementara itu daerah Kalimantan dan Papua masih belum
                 terdapat stasiun pengisian sama sekali. Hal ini tentunya menjadi tantangan baik bagi pemerintah maupun perusahaan mobil listrik agar mobil listrik dapat dijangkau masyarakat
-                di seluruh Indonesia.""")
+                di seluruh Indonesia.
+                </div>''', unsafe_allow_html=True)
 
 st.write("---")
 
 #Bagian 4 : Kesimpulan
 st.subheader("KESIMPULAN")
-st.write("""Dari beberapa perbandingan diatas, kita dapat menyimpulkan bahwa banyak perbedaan antara mobil listrik dengan mobil berbahan bakar minyak. Indonesia sendiri masih belum siap jika terdapat peralihan besar-besaran 
+st.markdown('''<div style="text-align: justify;">
+              Dari beberapa perbandingan diatas, kita dapat menyimpulkan bahwa banyak perbedaan antara mobil listrik dengan mobil berbahan bakar minyak. Indonesia sendiri masih belum siap jika terdapat peralihan besar-besaran 
             mobil bbm ke mobil listrik. Tantangan utama dari peralihan tersebut yaitu harga dan fasilitas pengisian masih terus dimimalkan pemerintah dan perusahaan mobil listrik melalui investasi dan pembangunan pabrik lokal serta pihak PLN yang membuka kerjasama dengan swasta 
             untuk perluasan SPKLU. Sangat diharapkan untuk pemerintah untuk mendukung program tersebut baik dari regulasi maupun investasi untuk mempercepat program peralihan mobil listrik tersebut demi Indonesia
             yang lebih baik.
-            """)
+            </div>''', unsafe_allow_html=True)
 st.write("")
 st.write("")
 st.write("")
