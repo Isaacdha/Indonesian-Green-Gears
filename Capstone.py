@@ -31,7 +31,7 @@ st.write(' ')
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
-col11, col12 = st.columns([5,4], gap = "medium")
+col11, col12 = st.columns([4,4], gap = "medium")
 with col11:
     st.markdown('''<div style="text-align: justify;">
                   Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
@@ -47,13 +47,14 @@ with col11:
                 pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini.</div>''', unsafe_allow_html=True)
 
 with col12:
-    st.markdown("***Proporsi Penyebab Pencemaran Udara (sumber data: kompas)***")
+    st.markdown("***Proporsi Penyebab Pencemaran Udara***")
     data_barchart = data_presentase.copy()
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
     #data_barchart.set_index('Alias', inplace=True)
     fig = px.pie(data_barchart, values='Presentase', names='Alias')
     #fig.layout.update(showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown('<div style="text-align: right;">sumber data: kompas</div>', unsafe_allow_html=True)
 
 with st.expander("Data Polusi (pm10) dan Presentase kendaraan listrik"):
     st.write('Berikut adalah data Polusi (pm10) dan Presentase kendaraan listrik (dilihat dari market share %) di Norwegia tahun 2010-2020 (sumber: statista.com & aqicn.org)')
@@ -73,7 +74,7 @@ with col5:
 
 with col6:
     corr,pvalue = spearmanr(data_r['Norways pm10 Pollution Index (pm10)'], data_r['Norways EV Vehicle Market Share (%)'])
-    st.metric("Korelasi Spearmann", round(corr,3),)
+    st.metric("Korelasi Spearmann", round(corr,3), delta = )
     st.markdown('''<div style="text-align: justify;">
                   Polusi udara dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
                 Hubungan negatif tersebut menandakan semakin tinggi proporsi kendaraan listrik, maka polusi udara akan cenderung semakin rendah.
@@ -94,14 +95,16 @@ st.markdown('''<div style="text-align: justify;">
             dikeluarkan untuk mengadakan/melakukan sesuatu (KBBI), sehingga harga dan biaya jalan masuk dalam komponen biaya itu sendiri. perbedaan biaya 
             kedua tipe model ini akan kita kulik satu-persatu.
             </div>''', unsafe_allow_html=True)
-
+st.markdown(' ')
+    
 #Harga
 st.subheader("Harga")
-st.write('''<div style="text-align: justify;">
+st.markdown('''<div style="text-align: justify;">
               Harga dari suatu produk sangat dipengaruhi oleh ketersediaan pabrik dan sumber daya suatu negara. 
             Mayoritas dari mobil listrik di Indonesia yang merupakan barang import pabrik luar negeri tentunya menyebabkan harganya melambung naik.
             Sebagai contoh, berikut adalah data harga dari 5 mobil bbm dan 4 mobil listrik terlaris di Indonesia selama 2022.
             </div>''', unsafe_allow_html=True)
+st.markdown(' ')
 with st.expander('Sumber'):
     st.markdown('***Sumber Data : Data Bulanan Penjualan Kendaraan Januari 2022 - Juni 2022 Gabungan Industri Kendaraan Bermotor Indonesia (GAIKINDO)***')
     st.markdown('***Website : gaikindo.or.id***')
@@ -136,6 +139,7 @@ st.markdown('''<div style="text-align: justify;">
               Dari data dan grafik diatas, tentunya terlihat bahwa mobil listrik sangat mahal dibandingkan dengan mobil bbm yang tentunya merupakan halangan bagi
             masyarakat untuk beralih ke mobil listrik. perbedaan harga yang signifikan tersebut membuat masyarakat juga masih setia dalam menggunakan mobil bbm.
             </div>''', unsafe_allow_html=True) 
+st.markdown(' ')
 
 ##Grafik Simulasi
 st.subheader('Simulasi Cost')
@@ -144,6 +148,8 @@ st.markdown('''<div style="text-align: justify;">
             lebih murah dibandingkan bbm. Apakah klaim tersebut benar?. Untuk menjawab klaim tersebut, kita dapat melakukan simulasi sederhana menggunakan komponen dari biaya
             itu sendiri, yaitu harga dan biaya per KM dengan acuan harga bensin Rp.7650/liter (Pertalite) dan harga listrik Rp.2466/kwh (SPKLU) yang dapat dilihat pada grafik dibawah.
             </div>''', unsafe_allow_html=True)
+st.markdown(' ')
+st.markdown(' ')
 st.markdown("***Simulasi Perbandingan Total Cost***")
 car_choice = st.multiselect('Pilih Mobil Untuk Dibandingkan', data_mobil['Alias'], ['EV-Based Vehicle', 'Gas-Based Vehicle'])
 
@@ -184,9 +190,11 @@ with col4:
             xsolve = round((base_price-car_price)/(car_consumption-base_consumption))
             st.write('Cost total dari mobil ' + str(i) + ' dan mobil ' + str(car_min_choice) + ' akan sama pada perjalanan kilometer ke-' + str(xsolve))
 
-st.write("""Dari hasil dari simulasi diatas, dapat dilihat bahwa secara garis besar biaya total dari mobil listrik lebih besar dari biaya total dari mobil bbm dikarenakan salah satu 
+st.markdown('''<div style="text-align: justify;">
+            Dari hasil dari simulasi diatas, dapat dilihat bahwa secara garis besar biaya total dari mobil listrik lebih besar dari biaya total dari mobil bbm dikarenakan salah satu 
             komponen biaya, yaitu harga mobil listrik masih sangat mahal untuk saat ini. namun adanya investasi dan rencana pembangunan pabrik mobil listrik di Indonesia tentunya akan 
-            menurunkan harga mobil listrik di kemudian hari.""" )
+            menurunkan harga mobil listrik di kemudian hari.
+            </div>''', unsafe_allow_html=True)
 st.write("---")
 
 #Bagian 3 : STASIUN PENGISIAN MOBIL LISTRIK VS BENSIN
@@ -197,6 +205,7 @@ st.markdown('''<div style="text-align: justify;">
             tercatat berjumlah sebanyak 5518 buah, jauh mengalahkan jumlah SPKLU dengan jumlah sebanyak 184 yang tersebar di pulau-pulau tertentu. Penyebaran SPKLU 
             di Indonesia dapat dilihat pada grafik dibawah.
             </div>''', unsafe_allow_html=True)
+st.markdown(' ')
 
 col9, col10 = st.columns([3, 1], gap="large")
 with col9:
