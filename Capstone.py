@@ -148,8 +148,8 @@ with col2:
         data_bar_agg = pd.DataFrame(np.zeros((2,2)), columns=['BBM', 'Elektrik'])
         data_bar_agg.iloc[0,0] = data_bar[data_bar["BBM"] != 0]["BBM"].mean()
         data_bar_agg.iloc[1,1] = data_bar[data_bar["Elektrik"] != 0]["Elektrik"].mean()
-        data_bar_agg.set_index('Index', inplace=True)
-        st.bar_chart(data_bar_agg, width=500, height=375)
+        st.table(data_bar_agg)
+        #st.bar_chart(data_bar_agg, width=500, height=375)
     else:
         st.markdown('''<div style="text-align: center;">
                         Harga Mobil BBM dan Listrik Terlaris di Indonesia
