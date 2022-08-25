@@ -144,13 +144,13 @@ with col2:
             data_bar['Index'] = data_mobil_harga['Kode']
             data_bar.set_index('Index', inplace=True)
             
-    if agregat = False:
+    if agregat:
+        st.table(data_bar)
+    else:
         st.markdown('''<div style="text-align: center;">
                         Harga Mobil BBM dan Listrik Terlaris di Indonesia
-                    </div>''', unsafe_allow_html=True)
+                        </div>''', unsafe_allow_html=True)
         st.bar_chart(data_bar, width=500, height=375)
-    else:
-        st.table(data_bar)
 
 st.markdown('''<div style="text-align: justify;">
               Dari data dan grafik diatas, tentunya terlihat bahwa mobil listrik sangat mahal dibandingkan dengan mobil bbm yang tentunya merupakan halangan bagi
