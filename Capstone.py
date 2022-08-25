@@ -47,14 +47,15 @@ with col11:
                 pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini.</div>''', unsafe_allow_html=True)
 
 with col12:
-    st.markdown("***Proporsi Penyebab Pencemaran Udara***")
+    st.markdown('''<div style="text-align: center;">
+                    Proporsi Penyebab Pencemaran Udara (sumberdata: kompas)
+                    </div>''', unsafe_allow_html=True)
     data_barchart = data_presentase.copy()
     data_barchart.drop('Penyebab', axis = 1, inplace=True)
     #data_barchart.set_index('Alias', inplace=True)
     fig = px.pie(data_barchart, values='Presentase', names='Alias')
     #fig.layout.update(showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
-    st.markdown('<div style="text-align: right;">sumber data: kompas</div>', unsafe_allow_html=True)
 
 with st.expander("Data Polusi (pm10) dan Presentase kendaraan listrik"):
     st.write('Berikut adalah data Polusi (pm10) dan Presentase kendaraan listrik (dilihat dari market share %) di Norwegia tahun 2010-2020 (sumber: statista.com & aqicn.org)')
@@ -122,7 +123,9 @@ with col1:
     st.dataframe(data_mobil_show[['Alias', 'Jenis', 'Harga', 'Kode']])
 
 with col2:
-    st.markdown('***Harga Mobil BBM dan Listrik Terlaris di Indonesia***')
+    st.markdown('''<div style="text-align: center;">
+                    Harga Mobil BBM dan Listrik Terlaris di Indonesia
+                    </div>''', unsafe_allow_html=True)
     data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
     for i in range(0,len(data_mobil_harga)):
         if data_mobil_harga['Jenis'][i] == 'Bensin':
@@ -206,10 +209,13 @@ st.markdown('''<div style="text-align: justify;">
             di Indonesia dapat dilihat pada grafik dibawah.
             </div>''', unsafe_allow_html=True)
 st.markdown(' ')
+st.markdown(' ')
 
 col9, col10 = st.columns([3, 1], gap="large")
 with col9:
-    st.markdown("***Peta Persebaran Stasiun Elektrik di Indonesia (sumber data: kompasiana)***")
+    st.markdown('''<div style="text-align: center;">
+                   Peta Persebaran Stasiun Elektrik di Indonesia (sumberdata: kompasiana)
+                   </div>''', unsafe_allow_html=True)
     st.image('SPKLU-Transparent.png')
 with col10:
     st.markdown('''<div style="text-align: justify;">
