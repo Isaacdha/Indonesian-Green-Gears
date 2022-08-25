@@ -6,9 +6,9 @@ import plotly.express as px
 from scipy.stats import spearmanr
 
 #Import Data
-data_polusi = pd.read_excel('Data.xlsx', sheet_name='Norway')
-data_mobil = pd.read_excel('Data.xlsx', sheet_name='Car')
-data_presentase = pd.read_excel('Data.xlsx', sheet_name='Air')
+data_polusi = pd.read_excel('resource/Data.xlsx', sheet_name='Norway')
+data_mobil = pd.read_excel('resource/Data.xlsx', sheet_name='Car')
+data_presentase = pd.read_excel('resource/Data.xlsx', sheet_name='Air')
 
 #Page Config
 st.set_page_config(
@@ -29,7 +29,7 @@ hide_dataframe_row_index = """
 st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
             
 #Introduction
-st.image('Header.png')
+st.image('resource/Header.png')
 st.write("---")
 st.markdown('''<div style="text-align: justify;">
               Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi presiden (inpres) terkait penggunaan kendaraan listrik di lingkungan pemerintahan. 
@@ -225,7 +225,7 @@ with col9:
     st.markdown('''<div style="text-align: center;">
                    Peta Persebaran Stasiun Elektrik di Indonesia (sumberdata: kompasiana)
                    </div>''', unsafe_allow_html=True)
-    st.image('SPKLU-Transparent.png')
+    st.image('resource/SPKLU-Transparent.png')
     
 with col10:
     st.markdown('''<div style="text-align: justify;">
