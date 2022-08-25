@@ -39,7 +39,7 @@ st.markdown('''<div style="text-align: justify;">
 st.write(' ')
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
-st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
+st.subheader("BAGIAN 1 : Polusi")
 col11, col12 = st.columns([4,4], gap = "medium")
 with col11:
     st.markdown('''<div style="text-align: justify;">
@@ -99,7 +99,7 @@ st.write("---")
     
 
 #Bagian 2 : COST MOBIL LISTRIK VS BENSIN
-st.subheader("BAGIAN 2 : Cost Mobil Listrik VS Bensin")
+st.subheader("BAGIAN 2 : Cost / Biaya")
 st.markdown('''<div style="text-align: justify;">
               Perbedaan selanjutnya sekaligus tantangan bagi peralihan energi adalah biaya (cost) dari mobil listrik itu sendiri. Biaya adalah uang yang 
             dikeluarkan untuk mengadakan/melakukan sesuatu (KBBI), sehingga harga dan biaya jalan masuk dalam komponen biaya itu sendiri. perbedaan biaya 
@@ -210,7 +210,7 @@ st.markdown('''<div style="text-align: justify;">
 st.write("---")
 
 #Bagian 3 : STASIUN PENGISIAN MOBIL LISTRIK VS BENSIN
-st.subheader("BAGIAN 3 : STASIUN PENGISIAN MOBIL LISTRIK VS BENSIN")
+st.subheader("BAGIAN 3 : Stasiun Pengisian")
 st.markdown('''<div style="text-align: justify;">
               Perbandingan lainnya yang tidak kalah penting adalah stasiun pengisian mobil listrik, Kesulitan menemukan SPKLU dan ketimpangan antara jumlah SPBU dan 
             jumlah SPKLU merupakan halangan utama masyarakat dari memilih mobil listrik sebagai kendaraan sehari-harinya. Sebagai perbandingan, SPBU di Indonesia 
