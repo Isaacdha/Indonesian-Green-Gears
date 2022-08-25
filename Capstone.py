@@ -26,22 +26,24 @@ st.markdown('''<div style="text-align: justify;">Pemerintah RI dikabarkan tengah
             Selain itu, Rencana investasi dan pembangunan pabrik baterai dan mobil listrik baru saja diluncurkan oleh beberapa perusahaan mobil listrik, sebut saja 
             Hyundai (Juni) dan Wuling (Juli). Dibalik rencana dan berita tersebut, tentunya banyak pro dan kontra mengenai mobil listrik yang akan menggantikan mobil
             berbahan bakar minyak. Apa saja perbedaan dari kedua jenis mobil tersebut? Berikut pembahasannya.</div>''', unsafe_allow_html=True)
+st.write(' ')
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
 col11, col12 = st.columns([5,4], gap = "large")
 with col11:
-    st.write("""Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
+    st.markdown('''<div style="text-align: justify;">
+                Perbedaan mendasar dari mobil listrik dan mobil bbm tentu saja dari polusinya. Mobil listrik bergerak menggunakan energi listrik yang tersimpan pada baterai, 
                 sehingga dalam pengoperasiannya minim polusi. Disisi lain, Mobil bbm masih bergantung pada pembakaran minyak yang tentunya melepaskan banyak gas rumah kaca 
-                yang merupakan penyebab polusi udara.""")
-    st.write("""
+                yang merupakan penyebab polusi udara.</div>''', unsafe_allow_html=True)
+    st.markdown('''<div style="text-align: justify;">
                 Dikutip dari Kompas.com, 75% dari polusi udara di Indonesia disebabkan oleh transportasi, diikuti oleh pembangkit listrik dan pemanas pada 9%, Industri 8%, 
                 dan Domestik 8%. Data-data tersebut tersaji pada diagram lingkaran di samping ini. Fakta ini tentunya merupakan salah satu motivasi pemerintah dalam mendukung 
-                peralihan jenis mobil baik dari regulasi maupun investasi.""")
-    st.write("""
+                peralihan jenis mobil baik dari regulasi maupun investasi.</div>''', unsafe_allow_html=True)
+    st.markdown('''<div style="text-align: justify;">
                 Dari argumen diatas pastinya terdapat pertanyaan. Apakah terdapat hubungan dari peralihan tenaga mobil dari BBM ke listrik pada polusi udara?. Untuk menjawab hal
                 tersebut, kita meminjam data dari Norwegia, yang merupakan salah satu negara yang berhasil melakukan peralihan energi mobil 10 tahun terakhir ini. Data dan
-                pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini. """)
+                pemeriksaan hubungan dari polusi dan mobil listrik dapat kita lihat dibawah ini.</div>''', unsafe_allow_html=True)
 
 with col12:
     st.markdown("***Proporsi Penyebab Pencemaran Udara (sumber data: kompas)***")
