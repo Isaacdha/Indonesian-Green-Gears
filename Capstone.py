@@ -26,7 +26,6 @@ st.markdown('''<div style="text-align: justify;">Pemerintah RI dikabarkan tengah
             Selain itu, Rencana investasi dan pembangunan pabrik baterai dan mobil listrik baru saja diluncurkan oleh beberapa perusahaan mobil listrik, sebut saja 
             Hyundai (Juni) dan Wuling (Juli). Dibalik rencana dan berita tersebut, tentunya banyak pro dan kontra mengenai mobil listrik yang akan menggantikan mobil
             berbahan bakar minyak. Apa saja perbedaan dari kedua jenis mobil tersebut? Berikut pembahasannya.</div>''', unsafe_allow_html=True)
-""")
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
 st.subheader("BAGIAN 1 : Polusi Mobil Listrik VS Bensin")
