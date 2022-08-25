@@ -151,6 +151,8 @@ with col2:
         st.markdown('''<div style="text-align: center;">
                         Harga Mobil BBM vs Listrik di Indonesia
                         </div>''', unsafe_allow_html=True)
+        data_bar_agg['Index'] = ['BBM', 'Electric']
+        data_bar_agg.set_index('Index', inplace=True)
         st.bar_chart(data_bar_agg, width=500, height=375)
     else:
         st.markdown('''<div style="text-align: center;">
@@ -164,7 +166,7 @@ with col2:
             else:
                 data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
                 data_bar['BBM'][i] = 0
-                data_bar['Index'] = data_mobil_harga['Kode']
+        data_bar['Index'] = data_mobil_harga['Kode']
         data_bar.set_index('Index', inplace=True)
         st.bar_chart(data_bar, width=500, height=375)
 
