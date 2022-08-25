@@ -138,13 +138,13 @@ with col2:
         data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
         for i in range(0,len(data_mobil_harga)):
             if data_mobil_harga['Jenis'][i] == 'Bensin':
-            data_bar['BBM'][i] = data_mobil_harga['Harga'][i]
-            data_bar['Elektrik'][i] = 0
-        else:
-            data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
-            data_bar['BBM'][i] = 0
-            data_bar['Index'] = data_mobil_harga['Kode']
-            data_bar.set_index('Index', inplace=True)
+                data_bar['BBM'][i] = data_mobil_harga['Harga'][i]
+                data_bar['Elektrik'][i] = 0
+            else:
+                data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
+                data_bar['BBM'][i] = 0
+                data_bar['Index'] = data_mobil_harga['Kode']
+        data_bar.set_index('Index', inplace=True)
         st.table(data_bar)
     else:
         st.markdown('''<div style="text-align: center;">
@@ -153,13 +153,13 @@ with col2:
         data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
         for i in range(0,len(data_mobil_harga)):
             if data_mobil_harga['Jenis'][i] == 'Bensin':
-            data_bar['BBM'][i] = data_mobil_harga['Harga'][i]
-            data_bar['Elektrik'][i] = 0
-        else:
-            data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
-            data_bar['BBM'][i] = 0
-            data_bar['Index'] = data_mobil_harga['Kode']
-            data_bar.set_index('Index', inplace=True)
+                data_bar['BBM'][i] = data_mobil_harga['Harga'][i]
+                data_bar['Elektrik'][i] = 0
+            else:
+                data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
+                data_bar['BBM'][i] = 0
+                data_bar['Index'] = data_mobil_harga['Kode']
+        data_bar.set_index('Index', inplace=True)
         st.bar_chart(data_bar, width=500, height=375)
 
 st.markdown('''<div style="text-align: justify;">
