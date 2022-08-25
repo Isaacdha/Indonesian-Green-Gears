@@ -18,7 +18,16 @@ st.set_page_config(
 
 with st.spinner(text = 'Loading Resources...'):
     time.sleep(5)
-    
+
+# Inject CSS to Hide Index Table
+hide_dataframe_row_index = """
+            <style>
+            .row_heading.level0 {display:none}
+            .blank {display:none}
+            </style>
+            """
+st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
+            
 #Introduction
 st.image('Header.png')
 st.write("---")
@@ -211,12 +220,13 @@ st.markdown('''<div style="text-align: justify;">
 st.markdown(' ')
 st.markdown(' ')
 
-col9, col10 = st.columns([3, 1], gap="large")
+col9, col10 = st.columns([6.5, 3.5], gap="medium")
 with col9:
     st.markdown('''<div style="text-align: center;">
                    Peta Persebaran Stasiun Elektrik di Indonesia (sumberdata: kompasiana)
                    </div>''', unsafe_allow_html=True)
     st.image('SPKLU-Transparent.png')
+    
 with col10:
     st.markdown('''<div style="text-align: justify;">
                   Dari grafik penyebaran SPKLU disamping, dapat dilihat bahwa SPKLU di Indonesia masih berpusat di Pulau Jawa saja, sementara itu daerah Kalimantan dan Papua masih belum
