@@ -22,10 +22,10 @@ with st.spinner(text = 'Loading Resources...'):
 #Introduction
 st.image('Header.png')
 st.write("---")
-st.write("""Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi presiden (inpres) terkait penggunaan kendaraan listrik di lingkungan pemerintahan. 
+st.markdown('''<div style="text-align: justify;">Pemerintah RI dikabarkan tengah menyiapkan regulasi berupa instruksi presiden (inpres) terkait penggunaan kendaraan listrik di lingkungan pemerintahan. 
             Selain itu, Rencana investasi dan pembangunan pabrik baterai dan mobil listrik baru saja diluncurkan oleh beberapa perusahaan mobil listrik, sebut saja 
             Hyundai (Juni) dan Wuling (Juli). Dibalik rencana dan berita tersebut, tentunya banyak pro dan kontra mengenai mobil listrik yang akan menggantikan mobil
-            berbahan bakar minyak. Apa saja perbedaan dari kedua jenis mobil tersebut? Berikut pembahasannya.
+            berbahan bakar minyak. Apa saja perbedaan dari kedua jenis mobil tersebut? Berikut pembahasannya.</div>''', unsafe_allow_html=True)
 """)
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
