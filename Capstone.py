@@ -66,7 +66,7 @@ with col12:
     #fig.layout.update(showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
 
-with st.expander("Data Polusi (pm10) dan Presentase kendaraan listrik"):
+with st.expander("Data Polusi & Kendaraan"):
     st.write('Berikut adalah data Polusi (pm10) dan Presentase kendaraan listrik (dilihat dari market share %) di Norwegia tahun 2010-2020 (sumber: statista.com & aqicn.org)')
     st.table(data_polusi)
 
@@ -132,9 +132,7 @@ with col1:
     st.table(data_mobil_show[['Alias', 'Jenis', 'Harga', 'Kode']])
 
 with col2:
-    st.markdown('''<div style="text-align: center;">
-                    Harga Mobil BBM dan Listrik Terlaris di Indonesia
-                    </div>''', unsafe_allow_html=True)
+    agregat = st.checkbox('Agregat')
     data_bar = pd.DataFrame(np.random.randn(9, 2), columns=['BBM', 'Elektrik'])
     for i in range(0,len(data_mobil_harga)):
         if data_mobil_harga['Jenis'][i] == 'Bensin':
@@ -143,9 +141,16 @@ with col2:
         else:
             data_bar['Elektrik'][i] = data_mobil_harga['Harga'][i]
             data_bar['BBM'][i] = 0
-    data_bar['Index'] = data_mobil_harga['Kode']
-    data_bar.set_index('Index', inplace=True)
-    st.bar_chart(data_bar, width=500, height=375)
+            data_bar['Index'] = data_mobil_harga['Kode']
+            data_bar.set_index('Index', inplace=True)
+            
+    if agregat = False:
+        st.markdown('''<div style="text-align: center;">
+                        Harga Mobil BBM dan Listrik Terlaris di Indonesia
+                    </div>''', unsafe_allow_html=True)
+        st.bar_chart(data_bar, width=500, height=375)
+    else:
+        st.table(data_bar)
 
 st.markdown('''<div style="text-align: justify;">
               Dari data dan grafik diatas, tentunya terlihat bahwa mobil listrik sangat mahal dibandingkan dengan mobil bbm yang tentunya merupakan halangan bagi
