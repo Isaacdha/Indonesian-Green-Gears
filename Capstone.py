@@ -74,7 +74,7 @@ with col5:
 
 with col6:
     corr,pvalue = spearmanr(data_r['Norways pm10 Pollution Index (pm10)'], data_r['Norways EV Vehicle Market Share (%)'])
-    st.metric("Korelasi Spearmann", round(corr,3), delta = )
+    st.metric("Korelasi Spearmann", round(corr,3))
     st.markdown('''<div style="text-align: justify;">
                   Polusi udara dan Proporsi Kendaraan Listrik di Norwegia Memiliki Hubungan Negatif Yang Kuat,
                 Hubungan negatif tersebut menandakan semakin tinggi proporsi kendaraan listrik, maka polusi udara akan cenderung semakin rendah.
