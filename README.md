@@ -72,7 +72,7 @@ streamlit run app.py
 ```
 Access the dashboard at `http://localhost:8501`
 
-Or visit the live version at: [https://indonesian-green-gears-idha.streamlit.app](https://indonesian-green-gears-idha.streamlit.appm)
+Or visit the live version at: [https://indonesian-green-gears-idha.streamlit.app](https://indonesian-green-gears-idha.streamlit.app)
 
 ## 🤝 Contributing <a id="contributing"></a>
 
