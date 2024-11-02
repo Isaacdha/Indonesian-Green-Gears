@@ -2,13 +2,13 @@
 
 # Indonesian Green Gears - Electric car & Gasoline car in Indonesia 🚗⚡
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brazilian-ecommerce-idha.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://indonesian-green-gears-idha.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 *A comprehensive analytics platform comparing Electric and Gasoline vehicles in Indonesia*
 
-[Live Dashboard](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com) | [Documentation](#documentation) | [Getting Started](#getting-started) | [Contributing](#contributing)
+[Live Dashboard](https://indonesian-green-gears-idha.streamlit.app) | [Documentation](#documentation) | [Getting Started](#getting-started) | [Contributing](#contributing)
 
 </div>
 
@@ -72,7 +72,7 @@ streamlit run app.py
 ```
 Access the dashboard at `http://localhost:8501`
 
-Or visit the live version at: [https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com)
+Or visit the live version at: [https://indonesian-green-gears-idha.streamlit.app](https://indonesian-green-gears-idha.streamlit.appm)
 
 ## 🤝 Contributing <a id="contributing"></a>
 
@@ -84,7 +84,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- [DQLab](https://dqlab.id/) for the project framework and support
+- [DQLab](https://dqlab.id/) for the knowledge and support
 - [Streamlit](https://streamlit.io/) for the visualization framework
 - Indonesian Government for regulatory information and data
 
