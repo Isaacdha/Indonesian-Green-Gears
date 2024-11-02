@@ -1,10 +1,10 @@
 <div align="center">
 
-# Indonesian Vehicle Comparison Dashboard 🚗⚡
+# Indonesian Green Gears - Electric car & Gasoline car in Indonesia 🚗⚡
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com)
-[![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brazilian-ecommerce-idha.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 *A comprehensive analytics platform comparing Electric and Gasoline vehicles in Indonesia*
 
@@ -16,44 +16,40 @@
 
 ## 📊 Overview
 
-The Indonesian Vehicle Comparison Dashboard is a data analysis platform that provides detailed comparisons between electric (⚡) and gasoline (🏭) vehicles in Indonesia. This project was developed as part of the DQLab's Tetris Final Project, focusing on analyzing the vehicular transition in response to the Indonesian Government's electric car revolution regulatory plan.
+The Indonesian Vehicle Comparison Dashboard is a data analysis platform that provides comparisons between electric (⚡) and gasoline (🏭) vehicles in Indonesia. This project was developed as part of the DQLab's Tetris Final Project, focusing on analyzing the vehicular transition in response to the Indonesian Government's electric car revolution regulatory plan.
 
 ### Key Features
 - 📈 Interactive comparison visualizations
-- 🔍 Detailed vehicle specifications analysis
-- 💰 Cost comparison metrics
-- 🌍 Environmental impact assessment
-- 📊 Market trend analysis
+- 📊 Pollution Comparison
+- 💰 Cost & Price comparison metrics
+- 🌍 Facilities Assessment
 
 ## 📚 Documentation <a id="documentation"></a>
 
 ### Data Sources
-The analysis utilizes comprehensive vehicle data from Indonesian automotive sources and government regulations regarding electric vehicle adoption.
+The analysis utilizes vehicle data from Indonesian automotive sources and government regulations regarding electric vehicle adoption.
 
 ### Repository Structure
 ```
 indonesian-vehicle-comparison/
-├── Dashboard/
-│   ├── app.py                    # Main dashboard application
-│   ├── .streamlit/              # Local dashboard configuration
-│   └── data/                    # Local data files
-├── notebooks/
-│   └── analysis.ipynb           # Development and analysis notebook
-├── requirements.txt
+├── .streamlit/
+├── Resouce/                    # Resouce for Running App
+├── Greengears.py               # Main App
+├── requirements.txt            # Requirement
 └── README.md
 ```
 
 ## 🚀 Getting Started <a id="getting-started"></a>
 
 ### Prerequisites
-- Python 3.7 or higher
+- Python 3.10 or higher
 - pip package manager
 
 ### Installation
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/[your-username]/[repository-name].git
+git clone https://github.com/Isaacdha/Indonesian-Green-Gears.git
 ```
 
 2. **Navigate to Project Directory**
@@ -76,13 +72,6 @@ streamlit run app.py
 Access the dashboard at `http://localhost:8501`
 
 Or visit the live version at: [https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com)
-
-### Features Include:
-- Vehicle specification comparisons
-- Cost analysis between electric and gasoline vehicles
-- Environmental impact assessments
-- Market trend visualizations
-- Government policy implications
 
 ## 🤝 Contributing <a id="contributing"></a>
 
