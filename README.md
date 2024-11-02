@@ -36,13 +36,14 @@ indonesian-vehicle-comparison/
 ├── Resouce/                    # Resouce for Running App
 ├── Greengears.py               # Main App
 ├── requirements.txt            # Requirement
+├── LICENSE
 └── README.md
 ```
 
 ## 🚀 Getting Started <a id="getting-started"></a>
 
 ### Prerequisites
-- Python 3.10 or higher
+- Python 3.7 or higher
 - pip package manager
 
 ### Installation
