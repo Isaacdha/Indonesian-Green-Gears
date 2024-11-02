@@ -2,13 +2,13 @@
 
 # Indonesian Green Gears - Electric car & Gasoline car in Indonesia 🚗⚡
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://indonesian-green-gears-idha.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brazilian-ecommerce-idha.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 *A comprehensive analytics platform comparing Electric and Gasoline vehicles in Indonesia*
 
-[Live Dashboard](indonesian-green-gears-idha.streamlit.app) | [Documentation](#documentation) | [Getting Started](#getting-started) | [Contributing](#contributing)
+[Live Dashboard](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com) | [Documentation](#documentation) | [Getting Started](#getting-started) | [Contributing](#contributing)
 
 </div>
 
@@ -34,16 +34,16 @@ The analysis utilizes vehicle data from Indonesian automotive sources and govern
 indonesian-vehicle-comparison/
 ├── .streamlit/
 ├── Resouce/                    # Resouce for Running App
-├── greengears_app.py           # Main App
+├── Greengears.py               # Main App
 ├── requirements.txt            # Requirement
-├── license
+├── LICENSE
 └── README.md
 ```
 
 ## 🚀 Getting Started <a id="getting-started"></a>
 
 ### Prerequisites
-- Python 3.10 or higher
+- Python 3.7 or higher
 - pip package manager
 
 ### Installation
@@ -72,7 +72,7 @@ streamlit run app.py
 ```
 Access the dashboard at `http://localhost:8501`
 
-Or visit the live version at: [indonesian-green-gears-idha.streamlit.app](indonesian-green-gears-idha.streamlit.app)
+Or visit the live version at: [https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com](https://isaacdha-streamlit-tetris-capstone-kip4r2.streamlitapp.com)
 
 ## 🤝 Contributing <a id="contributing"></a>
 
@@ -84,7 +84,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- [DQLab](https://dqlab.id/) for the knowledge and support
+- [DQLab](https://dqlab.id/) for the project framework and support
 - [Streamlit](https://streamlit.io/) for the visualization framework
 - Indonesian Government for regulatory information and data
 
