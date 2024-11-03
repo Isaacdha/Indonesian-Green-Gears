@@ -5,6 +5,7 @@ import numpy as np
 import plotly.express as px
 from scipy.stats import spearmanr
 from streamlit_option_menu import option_menu
+from PIL import Image
 
 #Page Config
 st.set_page_config(
@@ -34,6 +35,11 @@ def load_data():
 
 data_polusi, data_mobil, data_presentase, data_r, data_mobil_harga, data_mobil_show = load_data()
 
+@st.cache_resource
+def load_image(image_path):
+    return Image.open(image_path)
+
+
 with st.spinner(text = 'Loading Resources...'):
     time.sleep(5)
 
@@ -47,7 +53,8 @@ hide_dataframe_row_index = """
 st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
 
 # Sidebar Title
-st.logo('resource/logo.png', icon_image='resource/Logo_small.png', size='large')
+st.logo(load_image('resource/logo.png'), icon_image=load_image('resource/Logo_small.png'), size='large')
+st.sidebar.image(load_image('resource/dashboard_image.webp'), use_column_width=True)
 st.sidebar.title("Green Gears Dashboard")
 with st.sidebar:
     page = option_menu(
@@ -68,21 +75,23 @@ with st.sidebar:
 # Language Selection
 language = st.sidebar.selectbox("Choose Language", ('English', 'Indonesian'))
 
-# Profile Section
-with st.sidebar.expander("Maker Profile"):
-    st.write("### Isaac Dwadattusyah Haikal Azziz")
-    st.write("""
-    - **Email:** Isaacazziz@gmail.com
-    - **LinkedIn:** [Isaac Dha](https://linkedin.com/in/isaacdha/)
-    - **GitHub:** [Isaac's Git](https://github.com/Isaacdha)
-    """)
-
 #Introduction
 if page == "🏠 Overview":
+    st.markdown("""
+            <style>
+                div[data-testid="column"] {
+                    width: fit-content !important;
+                    flex: unset;
+                }
+                div[data-testid="column"] * {
+                    width: fit-content !important;
+                }
+            </style>
+            """, unsafe_allow_html=True)
     if language == 'English':
-        st.image('resource/Header_en.png')
+        st.image(load_image('resource/Header_en.png'))
     else:
-        st.image('resource/Header.png')
+        st.image(load_image('resource/Header.png'))
     st.write("---")
     if language == 'English':
         st.markdown('''<div style="text-align: justify;">
@@ -100,6 +109,7 @@ if page == "🏠 Overview":
         st.markdown('<div style="font-size: small;"></div>', unsafe_allow_html=True)
         st.write("Silahkan pilih opsi dari menu navigasi untuk memulai.")
     st.write(' ')
+
     with st.popover('Disclaimer'):
         if language == 'English':
             st.markdown('***Capstone Project for TETRIS II 2022 By DQLab***')
@@ -109,7 +119,13 @@ if page == "🏠 Overview":
             st.markdown("Penulis sadar bahwa masih banyak kekurangan dalam pembuatan artikel dashboard ini. Saran dan masukan dapat dikirimkan ke email/LinkedIn penulis")
     with st.popover('News & Data Source'):
         st.markdown('kompas.co.id; gaikindo.or.id; autofun.co.id; oto.com; statista.com; aqicn.org; kompasiana.com')
-    
+    with st.popover('Author'):
+        st.markdown("### Isaac Dwadattusyah Haikal Azziz")
+        st.write("""
+                - **Email:** Isaacazziz@gmail.com
+                - **LinkedIn:** [Isaac Dha](https://linkedin.com/in/isaacdha/)
+                - **GitHub:** [Isaac's Git](https://github.com/Isaacdha)
+                """)
 
 #BAGIAN 1 : POLUSI MOBIL LISTRIK VS BENSIN
 if page == "🌍 Pollution":
@@ -174,8 +190,6 @@ if page == "🌍 Pollution":
             st.write('Here is the Pollution (pm10) and Electric Vehicle Market Share (%) data in Norway from 2010-2020 (source: statista.com & aqicn.org)')
             st.table(data_polusi)  
         
-
-
     with st.container(border=True):
         if language == 'English':
             st.markdown("#### Trend of Air Pollution & Electric Vehicle Market Share in Norway")
@@ -461,7 +475,7 @@ if page == "🔌 Charging Station":
             st.markdown('''<div style="text-align: center;">
                         Peta Persebaran Stasiun Elektrik di Indonesia (sumberdata: kompasiana)
                         </div>''', unsafe_allow_html=True)
-        st.image('resource/SPKLU-Transparent.png')
+        st.image(load_image('resource/SPKLU-Transparent.png'), use_column_width=True)
         
     with col10:
         if language == 'English':
@@ -480,7 +494,7 @@ if page == "🔌 Charging Station":
 #Bagian 4 : Kesimpulan
 if page == "📄 Conclusion":
     st.subheader("Kesimpulan" if language == 'Indonesian' else "Conclusion")
-    st.image('resource/Image.webp', use_column_width=True)
+    st.image(load_image('resource/Image.webp'), use_column_width=True)
     if language == 'Indonesian':
         st.markdown('''<div style="text-align: justify;">
                     Dari beberapa perbandingan diatas, kita dapat menyimpulkan bahwa banyak perbedaan antara mobil listrik dengan mobil berbahan bakar minyak. Indonesia sendiri masih belum siap jika terdapat peralihan besar-besaran 
